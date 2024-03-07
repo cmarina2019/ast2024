@@ -2,12 +2,19 @@
 #include "sensor.h"
 #include "temperature.h"
 #include "humidity.h"
+#include "lightlevel.h"
+#include "thermalcamera.h"
+#include "rgbcamera.h"
+
 #include <iostream>
 
 Dashboard::Dashboard() {
-    sensor = Sensor();
+    Sensor();
     temperature = Temperature();
     humidity = Humidity();
+    lightlevel = LightLevel();
+    thermalcamera = ThermalCamera();
+    rgbcamera = RGBCamera();
 }
 
 void Dashboard::showMenu() {
@@ -17,6 +24,9 @@ void Dashboard::showMenu() {
         std::cout << "Seleccione el sensor que desea consultar:\n";
         std::cout << "1. Temperature\n";
         std::cout << "2. Humidity\n";
+        std::cout << "3. Lightlevel\n";
+        std::cout << "4. Thermal Camera\n";
+        std::cout << "5. RGB Camera\n";
         std::cout << "0. Salir\n";
         std::cout << "Ingrese su opcion: ";
 
@@ -29,7 +39,18 @@ void Dashboard::showMenu() {
                 break;
             case 2:
                 humidity.getHumidity();
-                std::cout << "Humedad: " << humidity.obtenerLectura() << "\n";
+                break;
+            case 3:
+                lightlevel.getLightLevel();
+                std::cout << "LightLevel: " << lightlevel.obtenerLectura() << "\n";
+                break;
+            case 4:
+                std::cout << "ThermalCamera: " << "\n";
+                thermalcamera.getThermalCamera();
+                break;
+            case 5:
+                std::cout << "RGBCamera: " << "\n";
+                rgbcamera.getRGBCamera();
                 break;
             case 0:
                 std::cout << "Saliendo...\n";

@@ -4,7 +4,7 @@
 
 
 Sensor::Sensor() {
-    lectura = 0.0;  // Inicializar la lectura del sensor
+    lectura = 0.0;  // Asignar un valor inicial a la lectura del sensor;  // Inicializar la lectura del sensor
 }
 
 double Sensor::obtenerLectura() const {

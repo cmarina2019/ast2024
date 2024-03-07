@@ -5,9 +5,19 @@
 #include "sensor.h"
 
 class Humidity : public Sensor {
+private:
+    enum class HumidityQuality {
+        VeryBad,
+        Bad,
+        Neutral,
+        Good,
+        VeryGood
+
+    };
+
 public:
     Humidity();
-    void getHumidity(); // Cambié el nombre de la función para reflejar mejor su propósito
+    void getHumidity();
 };
 
 #endif // HUMIDITY_H
