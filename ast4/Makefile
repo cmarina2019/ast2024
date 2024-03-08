@@ -1,5 +1,5 @@
 # *****************************************************
-# Tu nombre
+# Christian Marina Villasevil
 # Makefile para compilar el programa
 # *****************************************************
 
@@ -7,8 +7,8 @@ CC = g++
 CFLAGS = -Wall -g
 .RECIPEPREFIX = >
 
-programa: humidity.o temperature.o sensor.o dashboard.o main.o lightlevel.o thermalcamera.o rgbcamera.o
->$(CC) $(CFLAGS) -o programa humidity.o temperature.o sensor.o dashboard.o main.o lightlevel.o thermalcamera.o rgbcamera.o
+programa: humidity.o temperature.o sensor.o dashboard.o main.o lightlevel.o thermalcamera.o rgbcamera.o airquality.o
+>$(CC) $(CFLAGS) -o programa humidity.o temperature.o sensor.o dashboard.o main.o lightlevel.o thermalcamera.o rgbcamera.o airquality.o
 
 humidity.o: humidity.cpp humidity.h sensor.h
 >$(CC) $(CFLAGS) -c humidity.cpp
@@ -19,7 +19,7 @@ temperature.o: temperature.cpp temperature.h sensor.h
 sensor.o: sensor.cpp sensor.h
 >$(CC) $(CFLAGS) -c sensor.cpp
 
-dashboard.o: dashboard.cpp dashboard.h humidity.h temperature.h lightlevel.h thermalcamera.h rgbcamera.h
+dashboard.o: dashboard.cpp dashboard.h humidity.h temperature.h lightlevel.h thermalcamera.h rgbcamera.h airquality.h
 >$(CC) $(CFLAGS) -c dashboard.cpp
 
 main.o: main.cpp dashboard.h
@@ -33,6 +33,9 @@ thermalcamera.o: thermalcamera.cpp thermalcamera.h sensor.h
 
 rgbcamera.o: rgbcamera.cpp rgbcamera.h sensor.h
 >$(CC) $(CFLAGS) -c rgbcamera.cpp
+
+airquality.o: airquality.cpp airquality.h sensor.h
+>$(CC) $(CFLAGS) -c airquality.cpp
 
 clean:
 >rm -f *.o programa

@@ -5,6 +5,8 @@
 #include "lightlevel.h"
 #include "thermalcamera.h"
 #include "rgbcamera.h"
+#include "airquality.h"
+
 
 #include <iostream>
 
@@ -15,6 +17,7 @@ Dashboard::Dashboard() {
     lightlevel = LightLevel();
     thermalcamera = ThermalCamera();
     rgbcamera = RGBCamera();
+    airquality = AirQuality();
 }
 
 void Dashboard::showMenu() {
@@ -27,6 +30,7 @@ void Dashboard::showMenu() {
         std::cout << "3. Lightlevel\n";
         std::cout << "4. Thermal Camera\n";
         std::cout << "5. RGB Camera\n";
+        std::cout << "6. Air Quality\n";
         std::cout << "0. Salir\n";
         std::cout << "Ingrese su opcion: ";
 
@@ -51,6 +55,10 @@ void Dashboard::showMenu() {
             case 5:
                 std::cout << "RGBCamera: " << "\n";
                 rgbcamera.getRGBCamera();
+                break;
+            case 6:
+                airquality.getAirQuality();
+                std::cout << "Air Quality: " << airquality.obtenerLectura() << "\n";
                 break;
             case 0:
                 std::cout << "Saliendo...\n";

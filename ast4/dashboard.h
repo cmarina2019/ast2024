@@ -8,6 +8,8 @@
 #include "lightlevel.h"
 #include "thermalcamera.h"
 #include "rgbcamera.h"
+#include "airquality.h"
+
 
 
 
@@ -23,6 +25,7 @@ private:
     LightLevel lightlevel;
     ThermalCamera thermalcamera;
     RGBCamera rgbcamera;
+    AirQuality airquality;
 };
 
 #endif // DASHBOARD_H
