@@ -29,7 +29,7 @@ void Dashboard::showMenu() {
     int option = -1;
 
     while (option != 0) {
-        system("clear");  // Utiliza "cls" en lugar de "clear" si estás en Windows
+        system("clear"); // Utiliza "cls" en lugar de "clear" si estás en Windows
 
         std::cout << "=====================\n";
         std::cout << "    MENÚ DE SENSORES   \n";
