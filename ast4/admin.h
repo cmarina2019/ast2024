@@ -9,12 +9,11 @@ private:
     std::vector<User*> userList;
 
 public:
-    Admin(std::string nif, int id, std::string name);
+    Admin(std::string nif, int id, std::string name, std::string pass, UserType userType);
 
     void AddUser(User* user);
     void Remove(int userID);
     void PrintUser();
-
 };
 
 #endif // ADMIN_H
