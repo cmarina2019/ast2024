@@ -1,7 +1,7 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
-#include "user.h"
+#include "User.h"
 #include <vector>
 
 class Admin : public User {

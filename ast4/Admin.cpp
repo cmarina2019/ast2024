@@ -1,4 +1,4 @@
-#include "admin.h"
+#include "Admin.h"
 #include <iostream>
 
 Admin::Admin(std::string nif, int id, std::string name, std::string pass, UserType userType)

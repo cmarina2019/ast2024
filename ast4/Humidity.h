@@ -2,7 +2,7 @@
 #ifndef HUMIDITY_H
 #define HUMIDITY_H
 
-#include "sensor.h"
+#include "Sensor.h"
 
 class Humidity : public Sensor {
 private:

@@ -1,18 +1,17 @@
-#include "lightlevel.h"
-#include "sensor.h"
+#include "Temperature.h"
+#include "Sensor.h"
 #include <cstdlib>  // Necesario para la función rand
 #include <ctime>    // Necesario para la función time
 
-LightLevel::LightLevel() {
+Temperature::Temperature() {
     // Inicializamos la semilla del generador de números aleatorios
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 }
 
-void LightLevel::getLightLevel() {
+void Temperature::getTemperature() {
     // Generamos un número aleatorio de temperatura entre 0 y 100 con un decimal
-    int lightlevel = rand() % 101;  // Genera un número aleatorio entre 0 y 100 sin decimales
-
+    float temperature = static_cast<float>(rand() % 1001) / 10.0;
     
     // Utilizamos la función protegida de Sensor para establecer la lectura
-    establecerLectura(lightlevel);
+    establecerLectura(temperature);
 }

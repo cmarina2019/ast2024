@@ -1,4 +1,4 @@
-#include "dashboard.h"
+#include "Dashboard.h"
 
 int main() {
     Dashboard dashboard;

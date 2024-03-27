@@ -1,4 +1,4 @@
-#include "user.h"
+#include "User.h"
 
 User::User(std::string nif, int id, std::string name, std::string pass, UserType userType)
     : NIF(nif), ID(id), Name(name), password(pass), type(userType) {}

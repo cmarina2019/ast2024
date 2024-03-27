@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <limits>
-#include "admin.h"
-#include "employee.h"
-#include "user.h"
+#include "Admin.h"
+#include "Employee.h"
+#include "User.h"
 
 void clearInputBuffer() {
     std::cin.clear();

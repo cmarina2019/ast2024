@@ -1,7 +1,7 @@
 #ifndef AIRQUALITY_H
 #define AIRQUALITY_H
 
-#include "sensor.h"
+#include "Sensor.h"
 
 class AirQuality : public Sensor {
 public:

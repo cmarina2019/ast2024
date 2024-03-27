@@ -1,5 +1,5 @@
-#include "rgbcamera.h"
-#include "sensor.h"
+#include "RGBCamera.h"
+#include "Sensor.h"
 #include <cstdlib>  // Necesario para la función rand
 #include <ctime>    // Necesario para la función time
 #include <iostream> // Necesario para la salida estándar (cout)

@@ -1,5 +1,5 @@
 // sensor.cpp
-#include "sensor.h"
+#include "Sensor.h"
 #include "string"
 
 

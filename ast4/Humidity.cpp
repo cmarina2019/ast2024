@@ -1,6 +1,6 @@
 // humidity.cpp
-#include "humidity.h"
-#include "sensor.h"
+#include "Humidity.h"
+#include "Sensor.h"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>

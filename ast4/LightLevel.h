@@ -1,7 +1,7 @@
 #ifndef LIGHTLEVEL_H
 #define LIGHTLEVEL_H
 
-#include "sensor.h"
+#include "Sensor.h"
 
 class LightLevel : public Sensor {
 public:

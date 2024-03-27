@@ -1,11 +1,11 @@
-#include "dashboard.h"
-#include "sensor.h"
-#include "temperature.h"
-#include "humidity.h"
-#include "lightlevel.h"
-#include "thermalcamera.h"
-#include "rgbcamera.h"
-#include "airquality.h"
+#include "Dashboard.h"
+#include "Sensor.h"
+#include "Temperature.h"
+#include "Humidity.h"
+#include "LightLevel.h"
+#include "ThermalCamera.h"
+#include "RGBCamera.h"
+#include "AirQuality.h"
 
 #include <iostream>
 #include <limits>

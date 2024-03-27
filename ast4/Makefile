@@ -7,35 +7,35 @@ CC = g++
 CFLAGS = -Wall -g
 .RECIPEPREFIX = >
 
-programa: humidity.o temperature.o sensor.o dashboard.o main.o lightlevel.o thermalcamera.o rgbcamera.o airquality.o
->$(CC) $(CFLAGS) -o programa humidity.o temperature.o sensor.o dashboard.o main.o lightlevel.o thermalcamera.o rgbcamera.o airquality.o
+programa: Humidity.o Temperature.o Sensor.o Dashboard.o main.o LightLevel.o ThermalCamera.o RGBCamera.o AirQuality.o
+>$(CC) $(CFLAGS) -o programa Humidity.o Temperature.o Sensor.o Dashboard.o main.o LightLevel.o ThermalCamera.o RGBCamera.o AirQuality.o
 
-humidity.o: humidity.cpp humidity.h sensor.h
->$(CC) $(CFLAGS) -c humidity.cpp
+Humidity.o: Humidity.cpp Humidity.h Sensor.h
+>$(CC) $(CFLAGS) -c Humidity.cpp
 
-temperature.o: temperature.cpp temperature.h sensor.h
->$(CC) $(CFLAGS) -c temperature.cpp
+Temperature.o: Temperature.cpp Temperature.h Sensor.h
+>$(CC) $(CFLAGS) -c Temperature.cpp
 
-sensor.o: sensor.cpp sensor.h
->$(CC) $(CFLAGS) -c sensor.cpp
+Sensor.o: Sensor.cpp Sensor.h
+>$(CC) $(CFLAGS) -c Sensor.cpp
 
-dashboard.o: dashboard.cpp dashboard.h humidity.h temperature.h lightlevel.h thermalcamera.h rgbcamera.h airquality.h
->$(CC) $(CFLAGS) -c dashboard.cpp
+Dashboard.o: Dashboard.cpp Dashboard.h Humidity.h Temperature.h LightLevel.h ThermalCamera.h RGBCamera.h AirQuality.h
+>$(CC) $(CFLAGS) -c Dashboard.cpp
 
-main.o: main.cpp dashboard.h
+main.o: main.cpp Dashboard.h
 >$(CC) $(CFLAGS) -c main.cpp
 
-lightlevel.o: lightlevel.cpp lightlevel.h sensor.h
->$(CC) $(CFLAGS) -c lightlevel.cpp
+LightLevel.o: LightLevel.cpp LightLevel.h Sensor.h
+>$(CC) $(CFLAGS) -c LightLevel.cpp
 
-thermalcamera.o: thermalcamera.cpp thermalcamera.h sensor.h
->$(CC) $(CFLAGS) -c thermalcamera.cpp
+Thermalcamera.o: ThermalCamera.cpp ThermalCamera.h Sensor.h
+>$(CC) $(CFLAGS) -c ThermalCamera.cpp
 
-rgbcamera.o: rgbcamera.cpp rgbcamera.h sensor.h
->$(CC) $(CFLAGS) -c rgbcamera.cpp
+RGBCamera.o: RGBCamera.cpp RGBCamera.h Sensor.h
+>$(CC) $(CFLAGS) -c RGBCamera.cpp
 
-airquality.o: airquality.cpp airquality.h sensor.h
->$(CC) $(CFLAGS) -c airquality.cpp
+AirQuality.o: AirQuality.cpp AirQuality.h Sensor.h
+>$(CC) $(CFLAGS) -c AirQuality.cpp
 
 clean:
 >rm -f *.o programa

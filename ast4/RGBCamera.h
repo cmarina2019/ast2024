@@ -1,7 +1,7 @@
 #ifndef RGBCAMERA_H
 #define RGBCAMERA_H
 
-#include "sensor.h"
+#include "Sensor.h"
 
 class RGBCamera : public Sensor {
 public:

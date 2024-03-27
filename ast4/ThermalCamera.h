@@ -1,7 +1,7 @@
 #ifndef THERMALCAMERA_H
 #define THERMALCAMERA_H
 
-#include "sensor.h"
+#include "Sensor.h"
 
 class ThermalCamera : public Sensor {
 public:
